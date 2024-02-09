@@ -265,7 +265,7 @@ UIGradient_4.Parent = TextButton_4
 
 -- Scripts:
 
-local function LHRN_fake_script() -- TextButton.LocalScript 
+local function BYNHK_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -273,122 +273,42 @@ local function LHRN_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.G.Visible = true
 	end)
 end
-coroutine.wrap(LHRN_fake_script)()
-local function XYWLSW_fake_script() -- fluency_icon.LocalScript 
+coroutine.wrap(BYNHK_fake_script)()
+local function FGVMCJL_fake_script() -- fluency_icon.LocalScript 
 	local script = Instance.new('LocalScript', fluency_icon)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(XYWLSW_fake_script)()
-local function DYIOYYR_fake_script() -- Home.Dragify 
+coroutine.wrap(FGVMCJL_fake_script)()
+local function GYTER_fake_script() -- Home.Dragify 
 	local script = Instance.new('LocalScript', Home)
 
-	local UIS = game:GetService("UserInputService")
-	local dragSpeed = -math.huge
-	
-	local dragToggle = nil
-	local dragInput = nil
-	local dragStart = nil
-	local dragPos = nil
-	
-	function dragify(Frame)
-		function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        script.Parent.Position = Position
-		end
-		
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-		end)
-		
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-		end)
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
+	script.Parent.Active = true
+	script.Parent.Draggable = true
 end
-coroutine.wrap(DYIOYYR_fake_script)()
-local function DRIK_fake_script() -- fluency_icon_2.LocalScript 
+coroutine.wrap(GYTER_fake_script)()
+local function TNFMR_fake_script() -- fluency_icon_2.LocalScript 
 	local script = Instance.new('LocalScript', fluency_icon_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(DRIK_fake_script)()
-local function RDPNKYA_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(TNFMR_fake_script)()
+local function VWRN_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("test")
 	end)
 end
-coroutine.wrap(RDPNKYA_fake_script)()
-local function QVGSVT_fake_script() -- G.Dragify 
+coroutine.wrap(VWRN_fake_script)()
+local function ZMIBV_fake_script() -- G.Dragify 
 	local script = Instance.new('LocalScript', G)
 
-	local UIS = game:GetService("UserInputService")
-	local dragSpeed = -math.huge
-	
-	local dragToggle = nil
-	local dragInput = nil
-	local dragStart = nil
-	local dragPos = nil
-	
-	function dragify(Frame)
-		function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        script.Parent.Position = Position
-		end
-		
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-		end)
-		
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-		end)
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent)
+	script.Parent.Active = true
+	script.Parent.Draggable = true
 end
-coroutine.wrap(QVGSVT_fake_script)()
+coroutine.wrap(ZMIBV_fake_script)()
